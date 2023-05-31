@@ -136,7 +136,7 @@ console.log("starWarsNames", starWarsNames)
 */
 
 
-let femaleCharacters =[]
+const femaleCharacters =[]
 
 for (let i=0; i < starWarsCharacters.length; i++) {
   if ( starWarsCharacters[i].gender === "female")
@@ -147,7 +147,7 @@ femaleCharacters.push(starWarsCharacters[i])}
 console.log("female characters", femaleCharacters)
 
 
-//???????????????????????????????????????????? come rimuovo le voci che non mi interessano? 
+
 
 
 /* ESERCIZIO 4
@@ -209,18 +209,13 @@ console.log(eyeColorArrays);
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
 
-let crewMass = 0;
-let i = 0;
+let crewMass = 0
+let i = 0
 
 while (i < starWarsCharacters.length) {
-  const character = starWarsCharacters[i];
-  const characterMass = parseInt(character.mass);
-
-  if (!isNaN(characterMass)) {
-    crewMass += characterMass;
-  }
-
-  i++;
+ crewMass += parseInt(starWarsCharacters[i].mass)
+ i++
+  
 }
 
 console.log("Total crew mass: " + crewMass);
